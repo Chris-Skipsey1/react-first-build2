@@ -1,8 +1,8 @@
-
+import Home from './components/pages/Home.js';
 
 function App() {
   return (
-    <p>Hello World</p>
+    <Home />
     
   );
 }

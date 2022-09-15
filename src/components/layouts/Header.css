@@ -7,6 +7,10 @@ header {
     background: #3c1557;
     display: flex;
   }
+
+  header a {
+    text-decoration: none;
+  }
   
   header a img {
     filter: invert(1);

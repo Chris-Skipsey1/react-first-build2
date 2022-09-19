@@ -6,7 +6,7 @@ body{
    /* Appearance */
    padding-top: 10px;
    width: 100%;
- 
+   
    /* Layout */
    display: flex;
    flex-wrap: wrap;
@@ -16,11 +16,19 @@ body{
 
 .card {
     /* Appearance */
-    border: 0px;
+    border: 5px;
     border-radius: 5px;
     background: White;
     box-shadow: 4px 4px 8px 4px rgba(70,70,70,0.3);
     position: static;
+    padding: 1rem;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 10px;
+    margin: 2rem;
 }
 
 div.Card.Hovering {
@@ -31,17 +39,6 @@ div.Card.Hovering {
   transition: all 0.25s ease;
 }
 
-.image {
-  height: 12rem;
-}
-
-.title {
-  padding: 1rem;
-}
-
-.description {
-  padding: 1rem;
-}
 
 
 

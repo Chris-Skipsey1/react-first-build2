@@ -1,4 +1,5 @@
-import Card from '../UI/Card';
+
+import ModulesList from '../modules/ModulesList';
 
 const DUMMY_DATA = [
     {
@@ -85,38 +86,13 @@ const DUMMY_DATA = [
 
 ];
 
-
-
 function Home() {
-    return (<section>
-        <div className="wrapper">
-
-            <Card
-                img="https://www.freeiconspng.com/thumbs/cat-png/cat-png-17.png"
-                title="Hello there"
-                description="This is a description of the cat" />
-
-            <Card
-                img="https://www.freeiconspng.com/thumbs/cat-png/cat-png-17.png"
-                title="Hello there"
-                description="This is a description of the cat" />
-
-            <Card
-                img="https://www.freeiconspng.com/thumbs/cat-png/cat-png-17.png"
-                title="Hello there"
-                description="This is a description of the cat" />
-
-            <Card
-                img="https://www.freeiconspng.com/thumbs/cat-png/cat-png-17.png"
-                title="Hello there"
-                description="This is a description of the cat" />
-            <ul>
-                {DUMMY_DATA.map((theModules) => {
-                    return <li key={theModules.ModuleID}>{theModules.ModuleName}</li>;
-                })}
-            </ul>
-        </div>
+    return ( <section>
+        <h1>Modules</h1>
+        <ModulesList modules={DUMMY_DATA} />
+    
     </section>
+
     );
 
 }

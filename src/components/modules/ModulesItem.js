@@ -1,9 +1,11 @@
 import Card from '../UI/Card';
 import classes from '../UI/Card.module.css';
+import { FaTimes } from 'react-icons/fa';
 
 
 
-function ModulesItem(props) {
+
+function ModulesItem(props, onDelete) {
     return (
         
         <li className={classes.Card.Hovering}>
@@ -16,10 +18,9 @@ function ModulesItem(props) {
             </div>
                 <h3 className={classes.h3}>{props.ModuleName}</h3>
                 <h2 className={classes.h2}>{props.ModuleCode}</h2>
-                <p>Level {props.ModuleLevel}</p>
+                <p>Level {props.ModuleLevel} <FaTimes style={{color:'red', cursor: 'pointer'}} onClick={() => onDelete(module.ModuleID)}/></p>
             </div>
             </div>
-            
             </Card>
 
             

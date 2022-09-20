@@ -1,7 +1,7 @@
 
 import ModulesList from '../modules/ModulesList';
 
-const DUMMY_DATA = [
+const MY_MODULES = [
     {
         ModuleID: 1,
         ModuleName: "Games Programming",
@@ -88,9 +88,11 @@ const DUMMY_DATA = [
 
 function Home() {
     return ( <section>
+        
         <h1>Modules</h1>
-        <ModulesList modules={DUMMY_DATA} />
-    
+        <ModulesList modules={MY_MODULES} />
+        
+        
     </section>
 
     );

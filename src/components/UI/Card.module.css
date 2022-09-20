@@ -1,37 +1,8 @@
-body{
-  margin: 2rem;
-}
+/* -------------------------------------------- */
+/* Styling //////////////////////////////////// */
+/* -------------------------------------------- */
 
-.wrapper {
-   /* Appearance */
-   padding-top: 10px;
-   width: 100%;
-   
-   /* Layout */
-   display: flex;
-   flex-wrap: wrap;
-   gap: 30px;
-   justify-content: center;
-}
-
-.card {
-    /* Appearance */
-    border: 5px;
-    border-radius: 5px;
-    background: White;
-    box-shadow: 4px 4px 8px 4px rgba(70,70,70,0.3);
-    position: static;
-    padding: 1rem;
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    padding-top: 10px;
-    margin: 2rem;
-}
-
-div.Card.Hovering {
+.Card.Hovering {
   /* Appearance */
   border-radius: 5px;
   box-shadow: 5px 10px 20px 4px rgba(70,70,70,0.5);
@@ -39,7 +10,42 @@ div.Card.Hovering {
   transition: all 0.25s ease;
 }
 
+div.CardContainer {
+  /* Appearance */
+  padding-top: 10px;
+  width: 100%;
 
+  /* Layout */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  
+}
 
+.Card {
+  /* Appearance */
+  border: 0px;
+  border-radius: 5px;
+  background: White;
+  box-shadow: 4px 4px 8px 4px rgba(70,70,70,0.3);
+  position: static;
+  padding: 12px;
+  
+}
 
+.image {
+  width: 14rem;
+  height: 11rem;
+  object-fit: cover;
+}
 
+.h3{
+  width: 10rem;
+  height: 7rem;
+  object-fit: cover;
+}
+
+.h2 {
+  object-fit: cover;
+}

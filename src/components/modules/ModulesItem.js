@@ -10,7 +10,7 @@ import '../UI/Icons.css';
 function ModulesItem(props, onDelete) {
     return (
 
-        <li className={classes.Card.Hovering}>
+        <div className={classes.Card.Hovering}>
             <Card>
 
                 <div className={classes.CardContainer}>
@@ -39,7 +39,7 @@ function ModulesItem(props, onDelete) {
             </Card>
 
 
-        </li>
+        </div>
 
     );
 }

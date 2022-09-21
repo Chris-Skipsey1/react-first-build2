@@ -6,6 +6,9 @@
     gap: 20px;
     padding: 10px;
     margin: 1px;
-  
 
+}
+
+.iconHover:hover {
+ color: grey;
 }

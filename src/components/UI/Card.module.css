@@ -22,8 +22,8 @@ div.CardContainer {
   border-radius: 5px;
   background: White;
   box-shadow: 4px 4px 8px 4px rgba(70,70,70,0.3);
-  position: static;
-  padding: 15px;
+  padding: 10px;
+
   
 }
 

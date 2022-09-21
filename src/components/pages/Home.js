@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 
 function Home() {
-    const [modules, setTasks] = useState(
+    const [modules, setModule] = useState(
         [
             {
                 ModuleID: 1,
@@ -92,8 +92,8 @@ function Home() {
 
     )
 
-    const deleteTask = (ModuleID) => {
-        setTasks(modules.filter((modules) => modules.ModuleID !== ModuleID))
+    const deleteModule = (ModuleID) => {
+        setModule(modules.filter((modules) => modules.ModuleID !== ModuleID))
     }
 
    
@@ -102,7 +102,7 @@ function Home() {
         <h1>Modules</h1>
         <p>Here's your modules</p>
         
-        <ModulesList modules={modules} onDelete={deleteTask} />
+        <ModulesList modules={modules} onDelete={deleteModule} />
         
     </section>
     );

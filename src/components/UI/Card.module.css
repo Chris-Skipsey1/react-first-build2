@@ -2,7 +2,7 @@
 /* Styling //////////////////////////////////// */
 /* -------------------------------------------- */
 
-.Card.Hovering {
+div.Card.Hovering {
   /* Appearance */
   border-radius: 5px;
   box-shadow: 5px 10px 20px 4px rgba(70,70,70,0.5);
@@ -14,38 +14,38 @@ div.CardContainer {
   /* Appearance */
   padding-top: 10px;
   width: 100%;
-
-  /* Layout */
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 30px;
-  
+  height: 50%;
 }
 
 .Card {
   /* Appearance */
-  border: 0px;
   border-radius: 5px;
   background: White;
   box-shadow: 4px 4px 8px 4px rgba(70,70,70,0.3);
   position: static;
-  padding: 12px;
+  padding: 15px;
   
 }
 
 .image {
-  width: 14rem;
-  height: 11rem;
+  width: 10rem;
+  height: 10rem;
   object-fit: cover;
 }
 
 .h3{
   width: 10rem;
-  height: 7rem;
+  height: 6rem;
   object-fit: cover;
 }
 
 .h2 {
   object-fit: cover;
+  color: #adadad;
+  font-size: 15px;
+}
+
+.p {
+  
+  font-size: 12px;
 }

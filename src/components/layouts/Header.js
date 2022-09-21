@@ -6,7 +6,7 @@ function Header() {
     return (
         <header>
             <Link to='/'>
-                <img src="" alt="Cat" />
+                <img src="https://img.icons8.com/ios-filled/50/undefined/conference-call.png" alt="Conference Call" />
             </Link>
             <Link to='/'>
             <h1>React First Build</h1>

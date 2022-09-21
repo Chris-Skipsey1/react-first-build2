@@ -1,0 +1,6 @@
+.divDelete {
+    color: #a8a8a8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}

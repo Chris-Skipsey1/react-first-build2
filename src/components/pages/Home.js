@@ -95,10 +95,13 @@ function Home() {
     const deleteTask = (ModuleID) => {
         setTasks(modules.filter((modules) => modules.ModuleID !== ModuleID))
     }
-    
+
+   
 
     return (<section>
         <h1>Modules</h1>
+        <p>Here's your modules</p>
+        
         <ModulesList modules={modules} onDelete={deleteTask} />
         
     </section>

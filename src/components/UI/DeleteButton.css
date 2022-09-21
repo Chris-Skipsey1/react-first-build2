@@ -1,0 +1,11 @@
+.delete {
+    color: #a8a8a8;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    margin: 1px;
+  
+
+}

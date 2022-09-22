@@ -7,7 +7,7 @@ import '../UI/Icons.css';
 
 
 
-function ModulesItem(props, onDelete) {
+function ModulesItem({module, onDelete}) {
     return (
 
         <div className={classes.Card.Hovering}>
@@ -16,11 +16,11 @@ function ModulesItem(props, onDelete) {
                 <div className={classes.CardContainer}>
                     <div className={classes.Card}>
                         <div>
-                            <img className={classes.image} src={props.ModuleImage} alt={props.ModuleName} />
+                            <img className={classes.image} src={module.ModuleImage} alt={module.ModuleName} />
                         </div>
-                        <h3 className={classes.h3}>{props.ModuleName}</h3>
-                        <h2 className={classes.h2}>{props.ModuleCode}</h2>
-                        <p className={classes.p}> Level {props.ModuleLevel} </p>
+                        <h3 className={classes.h3}>{module.ModuleName}</h3>
+                        <h2 className={classes.h2}>{module.ModuleCode}</h2>
+                        <p className={classes.p}> Level {module.ModuleLevel} </p>
                         <div className="iconDiv">
                             <div className="iconHover">
                                 <FaCheck />

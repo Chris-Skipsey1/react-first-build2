@@ -92,7 +92,7 @@ function Home() {
 
     )
 
-    const deleteModule = (ModuleID) => {
+    const handleDelete = (ModuleID) => {
         setModule(modules.filter((modules) => modules.ModuleID !== ModuleID))
     }
 
@@ -102,7 +102,7 @@ function Home() {
         <h1>Modules</h1>
         <p>Here's your modules</p>
         
-        <ModulesList modules={modules} onDelete={deleteModule} />
+        <ModulesList modules={modules} onDelete={handleDelete} />
         
     </section>
     );

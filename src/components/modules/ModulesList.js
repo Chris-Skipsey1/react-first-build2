@@ -2,18 +2,14 @@ import ModulesItem from './ModulesItem';
 import classes from './ModuleList.module.css';
 
 
-function ModulesList(props, onDelete) {
+function ModulesList({modules, onDelete}) {
     return (
         <ul className={classes.list}>
-            {props.modules.map((ModuleItem) => (
+            {modules.map((module) => (
                 <ModulesItem
-                    key={ModuleItem.ModuleID} 
+                    key={module.ModuleID} 
                     onDelete={onDelete}
-                    ModuleID={ModuleItem.ModuleID}
-                    ModuleImage={ModuleItem.ModuleImage}
-                    ModuleName={ModuleItem.ModuleName}
-                    ModuleCode={ModuleItem.ModuleCode}
-                    ModuleLevel={ModuleItem.ModuleLevel}
+                    module={module}
                 />
             ))}
         </ul>

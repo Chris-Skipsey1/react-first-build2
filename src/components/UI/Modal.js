@@ -1,16 +1,22 @@
 import '../UI/Modal.css';
+import Backdrop from './Backdrop'
 
-
-
-
-function Modal ({module, onDelete, onCancel}) {
-    console.log(JSON.stringify())
+function Modal({ message, action, onCancel }) {
+    // Component state ------------------------------
+    // Handlers -------------------------------------
+    // View -----------------------------------------
     return ( 
-    <div className='modal'>
-        <p>Are you sure you want to delete this Module?</p>
-        <button className='btn btn--alt' onClick={() => onDelete(module?.ModuleID)} >Yes</button>
-        <button className='btn' onClick={() => onCancel(onCancel)} >No</button>
-    </div>
+        <>
+            <div className='modal'>
+                <p>{message}</p>
+                {
+                    action &&
+                    <button className='btn btn--alt' onClick={action.onClick}>{action.title}</button>
+                }
+                <button className='btn' onClick={onCancel}>Cancel</button>
+            </div>
+            <Backdrop onCancel={onCancel} />
+        </>
     );
 }
 

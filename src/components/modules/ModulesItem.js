@@ -7,9 +7,9 @@ import '../UI/Icons.css';
 
 
 
-function ModulesItem({module, onDelete}) {
+function ModulesItem({module, deleteHandler}) {
     return (
-
+        
         <div className={classes.Card.Hovering}>
             <Card>
 
@@ -29,17 +29,18 @@ function ModulesItem({module, onDelete}) {
                                 <FaPen />
                             </div>
                             <div className="iconHover">
-                                <FaTrash onClick={() => onDelete(module.ModuleID)} />
+                                <FaTrash onClick={() => deleteHandler(deleteHandler)}  />
                             </div>
                         </div>
-
+                        
 
                     </div>
                 </div>
             </Card>
-
+           
 
         </div>
+        
 
     );
 }

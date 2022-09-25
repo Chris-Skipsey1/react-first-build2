@@ -1,10 +1,16 @@
 
 import ModulesList from '../modules/ModulesList';
 import { useState } from 'react';
+import Modal from '../UI/Modal';
+import Backdrop from '../UI/Backdrop';
+
 
 
 function Home() {
-    const [modules, setModule] = useState(
+
+    
+
+    const [modules, setModule] = useState (
         [
             {
                 ModuleID: 1,
@@ -92,17 +98,29 @@ function Home() {
 
     )
 
+    const [ modalIsOpen, setModalIsOpen] = useState(false);
+
     const handleDelete = (ModuleID) => {
-        setModule(modules.filter((modules) => modules.ModuleID !== ModuleID))
+        setModule(modules.filter((modules) => modules.ModuleID !== ModuleID))    
+        
     }
 
-   
+    const deleteHandler = () => {
+        setModalIsOpen(true);
+    }
+
+    const closeModalHandler = () => {
+        setModalIsOpen(false);
+    }
 
     return (<section>
         <h1>Modules</h1>
         <p>Here's your modules</p>
         
-        <ModulesList modules={modules} onDelete={handleDelete} />
+        <ModulesList modules={modules} deleteHandler={deleteHandler}  />
+       {modalIsOpen && <Modal onDelete={handleDelete} />}
+       {modalIsOpen && <Backdrop onCancel={closeModalHandler}/>}
+       
         
     </section>
     );

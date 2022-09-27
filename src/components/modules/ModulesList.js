@@ -3,7 +3,7 @@ import classes from './ModuleList.module.css';
 
 
 
-function ModulesList({modules, onDelete, deleteHandler, onCancel}) {
+function ModulesList({modules, onDelete}) {
     
     
     return (
@@ -11,10 +11,10 @@ function ModulesList({modules, onDelete, deleteHandler, onCancel}) {
             {modules.map((module) => (
                 <ModulesItem
                     key={module.ModuleID} 
-                    onDelete={onDelete}
-                    onCancel={onCancel}
-                    deleteHandler={deleteHandler}
                     module={module}
+                    onDelete={onDelete}
+                  
+                    
 
                 />
             ))}

@@ -1,7 +1,9 @@
 
 import ModulesList from '../modules/ModulesList';
 import { useState } from 'react';
+import { FaHeart } from 'react-icons/fa';
 import Modal from '../UI/Modal';
+
 
 const listOfModules = [
 
@@ -97,7 +99,6 @@ function Home() {
     const [modules, setModule] = useState(listOfModules);
     const [modalIsOpen, setModalIsOpen] = useState(true);
 
-
     //Handlers ---
 
     const handleDelete = (ModuleID) => {
@@ -109,6 +110,10 @@ function Home() {
         setModalIsOpen(false);
     }
 
+    const handleListFavourites = () => {
+        setModule(modules.filter((module) => module.isSubscribed));
+    }
+
 
     //View --
     return (
@@ -118,12 +123,14 @@ function Home() {
                     message="Cancel this modal to continue?"
                     action={null}
                     onCancel={handleCancel}
+
+
                 />
             }
 
             <h1>Modules</h1>
             <p>Here's your modules</p>
-            <ModulesList modules={modules} onDelete={handleDelete} />
+            <ModulesList modules={modules} onDelete={handleDelete} newFavourite={handleListFavourites} />
 
 
 

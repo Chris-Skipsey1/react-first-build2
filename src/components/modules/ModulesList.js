@@ -13,6 +13,7 @@ function ModulesList({modules, onDelete}) {
                     key={module.ModuleID} 
                     module={module}
                     onDelete={onDelete}
+                    
                   
                     
 

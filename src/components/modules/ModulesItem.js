@@ -2,10 +2,12 @@ import { useState } from 'react';
 import Modal from '../UI/Modal';
 import Card from '../UI/Card';
 import classes from '../UI/Card.module.css';
-import { FaCheck, FaPen, FaTrash } from 'react-icons/fa';
+import FavouriteDecorator from '../UI/FavouriteDecorator';
+import { FaCheck, FaPen, FaTrash, FaHeart } from 'react-icons/fa';
 import '../UI/IconHover.css';
 import '../UI/IconDiv.css';
 import '../UI/Icons.css';
+import '../UI/Favourite.css';
 
 
 
@@ -16,6 +18,7 @@ function ModulesItem({ module, onDelete }) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
     const [modalAction, setModalAction] = useState(null);
+    const [favouriteActivate, setFavouriteActivate] = useState(false);
 
     //Handlers ---
 
@@ -31,6 +34,21 @@ function ModulesItem({ module, onDelete }) {
         setModalIsOpen(true);
     }
 
+
+   
+
+
+    const turnOnFavourite = () => {
+        return (
+            
+            console.log("test")   
+        )
+    }
+
+
+    
+     
+
     return (
         <>
             <div className={classes.Card.Hovering}>
@@ -40,13 +58,17 @@ function ModulesItem({ module, onDelete }) {
                             <div>
                                 <img className={classes.image} src={module.ModuleImage} alt={module.ModuleName} />
                             </div>
+                            
                             <h3 className={classes.h3}>{module.ModuleName}</h3>
                             <h2 className={classes.h2}>{module.ModuleCode}</h2>
                             <p className={classes.p}> Level {module.ModuleLevel} </p>
+                            
+                           
                             <div className="iconDiv">
-                                <div className="iconHover">
-                                    <FaCheck />
-                                </div>
+                                <div className="iconHover">              
+                                    <FaCheck onClick={() => turnOnFavourite(module)} />
+                                    </div>
+                                
                                 <div className="iconHover">
                                     <FaPen />
                                 </div>
@@ -63,6 +85,7 @@ function ModulesItem({ module, onDelete }) {
                     message={modalMessage}
                     action={modalAction}
                     onCancel={handleCancel}
+                    
                 />
             }
 

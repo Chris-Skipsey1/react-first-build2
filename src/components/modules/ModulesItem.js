@@ -85,6 +85,7 @@ function ModulesItem({ module, onDelete }) {
                     message={modalMessage}
                     action={modalAction}
                     onCancel={handleCancel}
+                    test
                     
                 />
             }

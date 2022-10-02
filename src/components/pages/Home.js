@@ -113,7 +113,7 @@ function Home() {
     const handleListFavourites = () => {
         setModule(modules.filter((module) => module.isSubscribed));
     }
-
+    <div>test</div>
 
     //View --
     return (

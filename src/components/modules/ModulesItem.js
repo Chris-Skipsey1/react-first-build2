@@ -67,11 +67,11 @@ function ModulesItem({ module, onDelete }) {
                             <div className="iconDiv">
                                 <div className="iconHover">              
                                     <FaCheck onClick={() => turnOnFavourite(module)} />
-                                    </div>
+                                    </div><div></div>
                                 
                                 <div className="iconHover">
                                     <FaPen />
-                                </div>
+                                </div>dd
                                 <div className="iconHover">
                                     <FaTrash onClick={() => createDeleteModal(module)} />
                                 </div>

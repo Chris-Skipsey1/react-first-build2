@@ -71,7 +71,7 @@ function ModulesItem({ module, onDelete }) {
                                 
                                 <div className="iconHover">
                                     <FaPen />
-                                </div>dd
+                                </div>
                                 <div className="iconHover">
                                     <FaTrash onClick={() => createDeleteModal(module)} />
                                 </div>
